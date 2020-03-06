@@ -1,4 +1,16 @@
-div {
-  width: inherit;
+span:first-child {
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: inherit;
+  display: block;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+span:not(:first-child) {
+  display: inline-block;
+  text-overflow: unset;
+  overflow: unset;
 }

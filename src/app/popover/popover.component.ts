@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-popover',
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.css']
 })
-export class PopoverComponent implements OnInit {
+export class PopoverComponent {
 
-  constructor() { }
+  @ViewChild('base', { static: false}) baseRef: ElementRef;
 
-  ngOnInit() {
+  displayText =   "Hello, this is a sample span element";
+
+  constructor() { 
+  }
+
+  ngAfterViewInit(){
+    console.log(this.baseRef.nativeElement.offsetHeight);
+    console.log(this.baseRef.nativeElement.offsetWidth);
+    console.log(this.baseRef.nativeElement.scrollWidth);
   }
 
 }
