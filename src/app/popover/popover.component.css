@@ -1,0 +1,4 @@
+span {
+  width: inherit;
+  text-overflow: ellipsis;
+}
