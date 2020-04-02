@@ -20,4 +20,8 @@ export class PopoverComponent {
     console.log(this.baseRef.nativeElement.scrollWidth);
   }
 
+  ngOnChanges(){
+    console.log('ngOnChanges :: called');
+  }
+
 }
